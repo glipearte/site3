@@ -1206,3 +1206,119 @@ https://templatemo.com/tm-593-personal-shape
                 padding: 0 1rem;
             }
         }
+/* ---------------------------------------------------------
+   CORREÇÕES DE RESPONSIVIDADE – GLIPEARTE
+----------------------------------------------------------*/
+
+/* Grid dos serviços (Index) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Ajuste para garantir que qualquer grid inline do HTML não quebre */
+.portfolio-grid,
+.services-grid {
+    width: 100%;
+}
+
+/* Ícones de pagamento */
+.payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.payment-icons img {
+    height: 34px;
+    max-width: 80px;
+    width: auto;
+}
+
+/* Cards do orçamento mais fluidos */
+.card {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 16px !important;
+        border-radius: 10px;
+    }
+}
+
+/* Ajustes gerais de tipografia no mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 2.4rem !important;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem !important;
+    }
+}
+
+/* Ajuste do hero para telas pequenas */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 120px 0 80px;
+    }
+}
+
+/* Padding global reduzido no mobile */
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 0 !important;
+    }
+
+    .container {
+        padding: 0 1.2rem !important;
+    }
+}
+
+/* Portfólio – garantir 1 coluna em telas menores */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+}
+
+/* Navbar ajustes extra */
+@media (max-width: 480px) {
+    .logo img {
+        height: 70px !important;
+    }
+}
+
+/* Reduzindo espaçamento dos botões CTA no mobile */
+@media (max-width: 480px) {
+    .cta-button {
+        padding: 1rem 2rem !important;
+        font-size: 0.9rem !important;
+    }
+}
