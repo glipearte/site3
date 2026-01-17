@@ -1,129 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Glipearte • Pegue e Monte</title>
-    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glipearte Pegue e Monte - Festas Incríveis Começam Aqui</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html"><img src="logoglipearte.png" alt="Glipearte" style="height:90px; vertical-align:middle;"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="pegue-e-monte.html">Pegue e Monte</a></li>
-                <li><a href="quem-somos.html">Quem Somos</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="orcamento.html">Orçamento</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="pegue-e-monte.html">Pegue e Monte</a></li>
-            <li><a href="quem-somos.html">Quem Somos</a></li>
-            <li><a href="portfolio.html">Portfólio</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="orcamento.html">Orçamento</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="floating-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
-            <div class="shape shape-6"></div>
-        </div>
-
-        <div class="hero-content">
-            <div class="hero-subtitle">Glipearte • Pegue e Monte</div>
-            <h1>Locação de peças para festas</h1>
-            <p class="subtitle">Escolha, retire na loja, monte no seu evento e devolva. Itens profissionais para transformar sua comemoração.</p>
-            <a href="pegue-e-monte.html" class="cta-button">Como funciona</a>
-            <a href="orcamento.html" class="cta-button" style="margin-left:12px;">Ver Orçamento</a>
-        </div>
-        <div class="scroll-indicator" onclick="window.location='pegue-e-monte.html'"></div>
-    </section>
-
-    <!-- Features -->
-    <section id="services">
+    <header class="main-header">
         <div class="container">
-            <h2 class="section-title">Nossos serviços</h2>
-            <div class="portfolio-grid" style="grid-template-columns: repeat(3,1fr); gap: 2rem;">
-                <div class="portfolio-item" style="padding:2rem;">
-                    <h4>Retirada e devolução</h4>
-                    <p>O cliente retira o material em nossa loja, leva para o evento e devolve nas mesmas condições.</p>
-                </div>
-                <div class="portfolio-item" style="padding:2rem;">
-                    <h4>Peças para todos os estilos</h4>
-                    <p>Kits, painéis, cilindros, bandejas, boleiras, displays, arcos de balões e muito mais.</p>
-                </div>
-                <div class="portfolio-item" style="padding:2rem;">
-                    <h4>Flexibilidade</h4>
-                    <p>Opções por kit (Bronze/Prata/Ouro) e itens avulsos. Consulte o orçamento completo.</p>
-                </div>
-            </div>
+            <a href="#home" class="logo" data-page="home">
+                <img src="glipeartelogo.png" alt="Logo Glipearte Pegue e Monte">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="#quemsomos" class="nav-link" data-page="quemsomos">Quem Somos</a></li>
+                    <li><a href="#portfolio" class="nav-link" data-page="portfolio">Portfólio</a></li>
+                    <li><a href="#orcamento" class="nav-link" data-page="orcamento">Orçamento/Kits</a></li>
+                    <li><a href="#contato" class="nav-link" data-page="contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </section>
+    </header>
 
-    <!-- Payment & Social -->
-    <section id="payments" style="padding:3rem 0; background:var(--bg-secondary);">
-        <div class="container" style="text-align:center;">
-            <h3 style="font-size:1.6rem; margin-bottom:1rem;">Formas de pagamento</h3>
-            <div style="display:inline-block;">
-                <img src="imagens/visa.png" alt="Visa" style="height:34px; margin:0 8px;">
-                <img src="imagens/mastercard.png" alt="Mastercard" style="height:34px; margin:0 8px;">
-                <img src="imagens/hipercard.png" alt="Hipercard" style="height:34px; margin:0 8px;">
-                <img src="imagens/pix.png" alt="Pix" style="height:34px; margin:0 8px;">
-                <img src="imagens/amex.png" alt="Amex" style="height:34px; margin:0 8px;">
-                <img src="imagens/elo.png" alt="Elo" style="height:34px; margin:0 8px;">
+    <main id="app-content" class="container"></main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Glipearte Pegue e Monte. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://wa.me/5585986853750" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/glipearte" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61570541947090&locale=pt_BR" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             </div>
-
-            <div style="margin-top:1.2rem;">
-                <a href="https://wa.me/5585986853750" target="_blank" class="cta-button" style="padding:0.8rem 1.4rem;"><img src="imagens/whatsapp.png"></a>
-                <a href="https://instagram.com/glipearte" target="_blank" class="cta-button" style="padding:0.8rem 1.4rem; margin-left:10px;"><img src="imagens/instagram.png"></a>
-                <a href="https://www.facebook.com/profile.php?id=61570541947090&locale=pt_BR" target="_blank" class="cta-button" style="padding:0.8rem 1.4rem; margin-left:10px;"><img src="imagens/facebook.png"></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <p>&copy; 2025 Glipearte Pegue e Monte. Todos os direitos reservados.</p>
-                    <p>Retirada, montagem e devolução por conta do cliente (sem avarias).</p>
-                </div>
-                <div class="footer-right">
-                    <a href="pegue-e-monte.html">Como funciona</a>
-                    <a href="quem-somos.html">Quem Somos</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="orcamento.html">Orçamento</a>
-                </div>
+            <div class="payment-methods">
+                <p>Aceitamos:</p>
+                <img src="visa.png" title="Cartão Visa">
+                <img src="master.png" title="Cartão Mastercard">
+                <img src="amex.png" title="Cartão American Express">
+                <img src="pix.png" title="Pix">
             </div>
         </div>
     </footer>
 
-<script src="script.js"></script>
+    <!-- 🔥 Firebase v8 (compatível com seu script atual) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCvF7zflaoHFyk0AD8yaj5AR0yKYQQQ2qs",
+            authDomain: "site-glipearte.firebaseapp.com",
+            projectId: "site-glipearte",
+            storageBucket: "site-glipearte.firebasestorage.app",
+            messagingSenderId: "45140402328",
+            appId: "1:45140402328:web:20d1be280f18ef2bdf30ed",
+            measurementId: "G-E7B04ELNR5"
+        };
+
+        <!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("2GdVam70kzm7ZGfsc"); 
+    })();
+</script>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
