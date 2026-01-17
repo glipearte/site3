@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Glipearte - Pegue e Monte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #f9f9f9, #f1f1f1);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #ff4d4d, #ff7a7a);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px; }
+
+    .portfolio-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #ffffff;
+      color: #ff4d4d;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .portfolio-btn:hover {
+      background: #ffecec;
+      transform: translateY(-3px);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 71%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ff4d4d;
+      margin-bottom: 12px;
+    }
+
+    .card-content ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .card-content ul li {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .card-content ul li::before {
+      content: '✓';
+      color: #4CAF50;
+      position: absolute;
+      left: 0;
+    }
+
+    .cta {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-radius: 10px;
+      background: #ff4d4d;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .cta:hover { background: #e63b3b; }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer span { color: #ff4d4d; }
+      /* Hover premium já existente + efeitos extras */
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .card:hover::after { opacity: 1; }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portfólio de Decorações</h1>
+    <p>Conheça nossos kits Pegue e Monte e escolha o ideal para sua festa 🎉</p>
+    <a href="https://drive.google.com/drive/folders/1K5yJ361jtUQf3QReyjWmUUArGkAy2c5g?usp=sharing" target="_blank" class="portfolio-btn">Consulte o nosso portfólio de temas</a>
+  </header>
+
+  <section class="container">
+    <div class="portfolio-grid">
+
+      <!-- Kit Básico -->
+      <div class="card reveal">
+        <img src="images/kit-basico.jpg" alt="Kit Básico Glipearte">
+        <div class="card-content">
+          <h3>Kit Básico</h3>
+          <div class="price">R$ 55,00</div>
+          <ul>
+            <li>Painel redondo 50cm</li>
+            <li>Jarro com bucha</li>
+            <li>Boleira</li>
+            <li>3 bandejas</li>
+            <li>1 display de mesa</li>
+          </ul>
+          <a class="cta" href="https://wa.me/5585986853750" target="_blank">Consultar no WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Kit Charme -->
+      <div class="card reveal">
+        <img src="images/kit-charme.jpg" alt="Kit Charme Glipearte">
+        <div class="card-content">
+          <h3>Kit Charme</h3>
+          <div class="price">R$ 70,00</div>
+          <ul>
+            <li>Painel 50cm</li>
+            <li>Mini arco de balões</li>
+            <li>Jarro com flores</li>
+            <li>3 bandejas</li>
+            <li>2 displays</li>
+          </ul>
+          <a class="cta" href="https://wa.me/5585986853750" target="_blank">Consultar no WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Kit Encanto -->
+      <div class="card reveal">
+        <img src="images/kit-encanto.jpg" alt="Kit Encanto Glipearte">
+        <div class="card-content">
+          <h3>Kit Encanto</h3>
+          <div class="price">R$ 100,00</div>
+          <ul>
+            <li>Painel 50cm</li>
+            <li>Mini arco de balões</li>
+            <li>Jarro com flores</li>
+            <li>3 bandejas</li>
+            <li>Mesa cavalete</li>
+          </ul>
+          <a class="cta" href="https://wa.me/5585986853750" target="_blank">Consultar no WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Kit Elegance -->
+      <div class="card reveal">
+        <img src="images/kit-elegance.jpg" alt="Kit Elegance Glipearte">
+        <div class="card-content">
+          <h3>Kit Elegance</h3>
+          <div class="price">R$ 165,00</div>
+          <ul>
+            <li>Mesa cavalete com balões</li>
+            <li>Escadinha para lembranças</li>
+            <li>Tapete</li>
+            <li>2 displays</li>
+            <li>Mini arco de balões</li>
+          </ul>
+          <a class="cta" href="https://wa.me/5585986853750" target="_blank">Consultar no WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Kit Premium -->
+      <div class="card reveal">
+        <img src="images/kit-premium.jpg" alt="Kit Premium Glipearte">
+        <div class="card-content">
+          <h3>Kit Premium</h3>
+          <div class="price">R$ 180,00</div>
+          <ul>
+            <li>Mesa ripada com balões</li>
+            <li>Mesa para lembranças</li>
+            <li>4 bandejas</li>
+            <li>4 displays</li>
+            <li>Tapete decorativo</li>
+          </ul>
+          <a class="cta" href="https://wa.me/5585986853750" target="_blank">Consultar no WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <span>Glipearte - Pegue e Monte</span> • Decoração com amor e criatividade 💛</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      reveals.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if (cardTop < triggerBottom) {
+          card.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>
